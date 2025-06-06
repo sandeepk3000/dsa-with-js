@@ -116,7 +116,6 @@ function swapNumber(a, b) {
 }
 swapNumber(10,4)
 
-
 // Swap two numbers without using a third variable
 function swapNumberUsingDifference(a, b) {
   a = a + b
@@ -132,21 +131,22 @@ let arr9 = [1,2,3,4,5,6,7,8,9]
 let k1 = 3
 k1 = k1 % arr9.length
 let ans7 = new Array(arr9.length)
-let j = 0
-for(let i = arr9.length - k ; i < arr9.length;i++){
-  ans7[j++] = arr9[i]
+let j2 = 0
+for(let i = arr9.length - k1 ; i < arr9.length;i++){
+  ans7[j2++] = arr9[i]
 }
 for(let i = 0; i < arr9.length - k1 ;i++){
-  ans7[j++] = arr9[i]
+  ans7[j2++] = arr9[i]
 }
 console.log(ans7)
 
-// Rotate an array by k elements without using extra space
+// // Rotate an array by k elements without using extra space
 function swapArrayNumber(arr, i, j) {
   let temp = arr[i];
   arr[i] = arr[j];
   arr[j] = temp;
 }
+
 
 function reverseArray(arr, start, end) {
   while (start < end) {
@@ -164,3 +164,113 @@ reverseArray(arr10, 0, (n - k2) - 1);
 reverseArray(arr10, n - k2, n - 1);
 reverseArray(arr10, 0, n - 1);
 console.log(arr10);
+
+// Move all zeros to the end of the array
+let arr11 = [0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1]
+
+let arr12 = new Array(arr11.length)
+let zeros = 0
+for(let i = 0; i < arr11.length; i++){
+  if(arr11[i] == 0){
+    arr12[zeros++] = 0
+  }
+}
+console.log(zeros)
+for(let i = 0; i < arr11.length; i++){
+  if(arr11[i] == 1){
+    arr12[zeros++] = 1
+  }
+}
+console.log(arr12)
+
+// Move all zeros to the end of the array without using extra space
+let arr13 = [
+  1,1,0,0,0,1,0,1,1
+];
+let j1 = arr13.length - 1;
+let i1 = 0
+while (i1 <= j1) {
+  if (arr13[i1] > arr13[j1]) {
+    swapArrayNumber(arr13, i1, j1);
+    i1++
+  }if(arr13[i1]==0){
+    i1++
+  }
+  j1--
+}
+console.log(arr13)
+
+// Find the frequency of each element in an array
+function makeFrequencyArray(arr) {
+  let frequencyArray = new Array(100005);
+  for (let i = 0; i < arr.length; i++) {
+    if (frequencyArray[arr[i]] == undefined) {
+      frequencyArray[arr[i]] = 0;
+    }
+    frequencyArray[arr[i]]++;
+  }
+  return frequencyArray;
+}
+let frequencyArray = makeFrequencyArray([1, 2, 2, 2, 3, 3, 4, 6]);
+
+// Search an element in an array using frequency array
+let noOfQueries = 1;
+while (noOfQueries > 0) {
+  console.log("Enter the number to be searched");
+  let x = 3;
+  if (frequencyArray[x] == undefined) {
+    console.log("Number not found");
+  } else {
+    console.log(`Number found and frequency is ${frequencyArray[x]}`);
+  }
+  noOfQueries--;
+}
+
+// Move all odd numbers to the beginning of the array
+
+let arr14 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let i2 = 0;
+let j3 = arr14.length - 1;
+while (i2 <= j3) {
+  if (arr14[i2] % 2 != 0 && arr14[j3]%2 == 0) {
+    swapArrayNumber(arr14, i2, j3);
+    i2++;
+    j3--;
+  }
+  if (arr14[i2] % 2 == 0) {
+    i2++;
+  }
+  if (arr14[j3] % 2 != 0) {
+    j3--;
+  }
+}
+console.log(arr14);
+
+let arr15 =[-10,-3,-2,-1,-0.1,0,0,0,1,2,3]
+
+
+
+
+// Sort an array  of squares of numbers
+function sortArray(arr){
+  let arr16 = new Array(arr.length)
+  let i = 0;
+  let k = 0
+  let j = arr.length - 1;
+  while (i <= j){
+    let firstSqrt = Math.pow(Math.abs(arr[i]),2)
+    let lastSqrt = Math.pow(Math.abs(arr[j]),2)
+    if(firstSqrt > lastSqrt){
+      arr16[k] = firstSqrt
+      i++
+    }else{
+      arr16[k] = lastSqrt
+      j--
+    }
+    k++
+  }
+  reverseArray(arr16,0,arr16.length-1)
+  return arr16
+}
+
+console.log(sortArray(arr15))
