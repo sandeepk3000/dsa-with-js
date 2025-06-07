@@ -4,17 +4,6 @@
 
 
 
-// Count numbers greater than x
-let arr3 = [1,2,2,2,3,3,4,6,6]
-let count3 = 0;
-let x = 2;
-for(let i = 0; i < arr3.length; i++){
-  if(arr3[i] > x){
-    count3++;
-  }
-}
-console.log(count3)
-
 // Check if an array is sorted
 let arr4 = [1, 2,3,4,5,6,7,8,9];
 let isSorted = true;
