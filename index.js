@@ -8,19 +8,7 @@
 
 
 
-// Count pairs in an array whose sum is equal to x
 
-let arr6 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-let x6 = 7;
-let count6= 0;
-for(let i = 0; i < arr6.length; i++){
-  for(let j = i+1; j < arr6.length; j++){
-    if(arr6[i]+arr6[j] == x6){
-      count6++;
-    }
-  }
-}
-console.log(count6);
 
 // Remove duplicates from an array
 let arr7 = [1,2,3,1,2,5,4,3]
