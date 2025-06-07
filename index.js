@@ -2,16 +2,7 @@
 
 
 
-// Find the last index of a number in an array
-let arr = [1,2,2,2,3,3,4,6,6]
-let lastIndex = -1;
-let x3 = 2;
-for(let i = 0; i < arr.length; i++){
-  if(arr[i] == x3){
-    lastIndex = i;
-  }
-}
-console.log(lastIndex)
+
 
 // Count numbers greater than x
 let arr3 = [1,2,2,2,3,3,4,6,6]
