@@ -1,15 +1,6 @@
 
 
-// Find the index of a number in an array
-let arr2 = [1,2,2,2,3,3,4,6,6]
-let ans = -1;
-let x2 = 1;
-for(let i = 0; i < arr2.length; i++){
-  if(arr2[i] == x2){
-    ans = i;
-  }
-}
-console.log(ans)
+
 
 // Find the last index of a number in an array
 let arr = [1,2,2,2,3,3,4,6,6]
