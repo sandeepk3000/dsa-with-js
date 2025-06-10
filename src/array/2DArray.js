@@ -60,3 +60,5 @@ function multiplyTwoMatrice(arr1, r1, c1, arr2, r2, c2) {
   printArray(mulArray);
 }
 multiplyTwoMatrice(arr, 2, 2, secondArr, 2, 2);
+
+export { printArray, addTwoMarice, multiplyTwoMatrice };
