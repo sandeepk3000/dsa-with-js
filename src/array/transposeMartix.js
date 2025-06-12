@@ -1,6 +1,6 @@
 import { printArray } from "./2DArray.js";
 import { reverseArray } from "./reverseArray.js";
-
+  
 // Transpose of a matrix
 function transposeMatrix(matrix, row, col) {
   let transpose = Array.from({ length: row }, () =>
